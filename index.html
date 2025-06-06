@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mataya Media | Creative Agency</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            background-color: #fff;
+            color: #333;
+        }
+        header {
+            background: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        header img {
+            height: 100px; /* Increased logo size */
+            width: auto;
+            filter: drop-shadow(0 0 5px rgba(63, 94, 251, 0.5)); /* Added glow effect */
+        }
+        nav {
+            position: absolute;
+            right: 20px;
+        }
+        nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #3f5efb;
+        }
+        .hero {
+            text-align: center;
+            padding: 120px 20px; /* Increased padding */
+            background: linear-gradient(135deg, #fc466b, #3f5efb);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero h1 {
+            font-size: 3.5em; /* Larger heading */
+            margin-bottom: 25px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        .hero p {
+            font-size: 1.3em; /* Larger paragraph */
+            max-width: 650px;
+            margin: auto;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.2);
+        }
+         .watermark-right {
+            position: absolute;
+            top: 50%;
+            width: 350px; /* Larger watermark images */
+            height: 450px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            opacity: 1.25; /* More visible */
+            z-index: 1;
+            transform: translateY(-50%);
+        }
+        .watermark-right {
+            right: 100px;
+            background-image: url('bg1.png'); /* Higher resolution */
+            background-position: right center;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        /* Rest of your CSS remains the same */
+        .section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .section h2 {
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+        .section p {
+            max-width: 700px;
+            margin: auto;
+            line-height: 1.6;
+        }
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .service-box {
+            width: 280px;
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .service-box:hover {
+            transform: translateY(-5px);
+        }
+        .service-box img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        .service-box h3 {
+            margin-bottom: 10px;
+            color: #3f5efb;
+        }
+        .service-price {
+            color: #555;
+            font-size: 0.9em;
+            margin-top: 6px;
+            font-weight: bold;
+        }
+        .cta {
+            background: #3f5efb;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .cta a {
+            display: inline-block;
+            margin-top: 20px;
+            background: white;
+            color: #3f5efb;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .cta a:hover {
+            background: #fc466b;
+            color: white;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 30px;
+        }
+        .gallery img {
+            width: 100%;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.03);
+        }
+        .contact {
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .contact h2 {
+            margin-bottom: 20px;
+        }
+        .contact a {
+            display: inline-block;
+            margin: 10px;
+            font-size: 1.1em;
+            color: #3f5efb;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .contact a:hover {
+            color: #fc466b;
+        }
+        .contact i {
+            margin-right: 8px;
+        }
+        footer {
+            background: #f5f5f5;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="watermark-left"></div>
+    <div class="watermark-right"></div>
+    <div class="hero-content">
+        <h1>Welcome to Mataya Media</h1>
+        <img src="logo.png" alt="Mataya Media Logo" width="200" height="100" style="filter: brightness(1.1) saturate(1.2);">
+        <p>We are a creative agency turning visions into visual stories. Let's build something amazing together.</p>
+    </div>
+</section>
+
+<!-- Rest of your HTML remains the same -->
+<section class="section" id="about">
+    <h2>About Us</h2>
+    <p>Mataya Media is a dynamic creative agency driven by innovation and passion. We specialize in transforming ideas into powerful visual content that resonates. With a blend of artistic talent and strategic thinking, we deliver exceptional work that reflects our clients' vision.</p>
+</section>
+
+<section class="section" id="services">
+    <h2>Our Services</h2>
+    <div class="services">
+        <div class="service-box">
+            <img src="brand.png" alt="Branding">
+            <h3>Branding & Identity</h3>
+            <p>Creating a distinct and unforgettable identity for your business that resonates with your audience.</p>
+            <div class="service-price">From R450/hr</div>
+        </div>
+        <div class="service-box">
+            <img src="content.png" alt="Content Creation">
+            <h3>Content Creation</h3>
+            <p>We produce impactful visuals, videos, and campaigns that tell your brand story.</p>
+            <div class="service-price">From R500/hr</div>
+        </div>
+        <div class="service-box">
+            <img src="social.png" alt="Social Media">
+            <h3>Social Media</h3>
+            <p>Manage, grow, and elevate your brand on platforms like Instagram, Facebook, and TikTok.</p>
+            <div class="service-price">From R400/hr</div>
+        </div>
+        <div class="service-box">
+            <img src="photo&video.png" alt="Photography">
+            <h3>Photography & Videography</h3>
+            <p>Professional shoots tailored for your business, events, and promotions.</p>
+            <div class="service-price">From R550/hr</div>
+        </div>
+        <div class="service-box">
+            <img src="engagement.png" alt="Engagement Photoshoot">
+            <h3>Engagement Photoshoot</h3>
+            <p>Capturing your love story with timeless images you'll cherish forever.</p>
+            <div class="service-price">R2,500 per session</div>
+        </div>
+        <div class="service-box">
+            <img src="potrait.png" alt="Individual Portraits">
+            <h3>Individual Portraits</h3>
+            <p>Studio-quality individual portraits tailored to your unique style.</p>
+            <div class="service-price">R1,200 per session</div>
+        </div>
+        <div class="service-box">
+            <img src="family.png" alt="Family Photography">
+            <h3>Family Photography</h3>
+            <p>Fun, warm, and beautiful moments captured for generations to enjoy.</p>
+            <div class="service-price">R2,800 per session</div>
+        </div>
+        <div class="service-box">
+            <img src="matenity.png" alt="Maternity Portraits">
+            <h3>Maternity Portraits</h3>
+            <p>Celebrate your journey to motherhood with elegant and emotional portraits.</p>
+            <div class="service-price">R2,200 per session</div>
+        </div>
+        <div class="service-box">
+            <img src="event.png" alt="Event Photography">
+            <h3>Event Photography</h3>
+            <p>Capture every highlight of your event with style and clarity.</p>
+            <div class="service-price">From R3,500 per event</div>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery">
+        <img src="gallery1.png" alt="Sample 1">
+        <img src="gallery2.png" alt="Sample 2">
+        <img src="gallery3.png" alt="Sample 3">
+        <img src="gallery4.png" alt="Sample 4">
+    </div>
+</section>
+
+<section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <a href="https://www.instagram.com/mataya_media" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+    <a href="https://wa.me/27624659656" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+    <a href="mailto:maparuradonald@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+</section>
+
+<footer>
+    &copy; 2025 Mataya Media. All rights reserved.
+</footer>
+</body>
+</html>
